@@ -1,0 +1,33 @@
+body {
+    text-align: center;
+    line-height: 670px;
+}
+
+.keys {
+    display: inline-block;
+    line-height: normal;
+    vertical-align: middle;
+}
+
+.keys .key {
+    display: inline-block;
+    width: 60px;
+    margin: 0 20px;
+    border: 2px solid black;
+    background-color: #999999;
+    border-radius: .5rem;
+}
+
+kbd {
+    display: block;
+    font-size: 36px;
+    margin: 3px 0;
+    color: white;
+    font-weight: 400;
+}
+
+.key span {
+    display: block;
+    font-size: 12px;
+    margin: 0px 0px 5px 0px;
+}
