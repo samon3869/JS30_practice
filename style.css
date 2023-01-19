@@ -16,6 +16,7 @@ body {
     border: 2px solid black;
     background-color: #999999;
     border-radius: .5rem;
+    transition: all 0.08s;
 }
 
 kbd {
@@ -30,4 +31,10 @@ kbd {
     display: block;
     font-size: 12px;
     margin: 0px 0px 5px 0px;
+}
+
+.key.playing {
+    border: 3px solid yellow;
+    transform: scale(1.1);
+    box-shadow: 2px yellow;
 }
