@@ -57,3 +57,7 @@ input.search {
     transform: perspective(100px) rotateX(3deg) translateY(2px);
     background: linear-gradient(to bottom, #ffffff 0%, #efefef 100%);
 }
+
+.hl {
+    background: #ffc600;
+}
