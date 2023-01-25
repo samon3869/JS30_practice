@@ -10,6 +10,13 @@ fetch(endpoint)
     .then(data => cities.push(...data));
 
 // 2. make list of matched cities
+function findMatches(wordToMatch, cities) {
+    return cities.filter(place => {
+        const regex = new RegExp(wordToMatch, "gi");
+        return place.city.match(regex) || place.state.match(regex)
+    });
+}
+
 // 3. make html text code from the 'matched cities' list
 // 4. input the html text code
 // 5. make all these process to one fucntion
