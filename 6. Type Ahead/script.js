@@ -18,5 +18,19 @@ function findMatches(wordToMatch, cities) {
 }
 
 // 3. make html text code from the 'matched cities' list
-// 4. input the html text code
+function displayMatches(wordToMatch) {
+    const matchArray = findMatches(wordToMatch, cities);
+    const textCode = matchArray.map(place => {
+        return `
+        <li>
+            <span class="name">${place.city}, ${place.state}</span>
+            <span class="population">${place.population}</span>
+        </li>
+        `
+    }).join('');
+    // 4. input the html text code
+    suggestions.innerHTML = textCode;
+}
+
+const suggestions = document.querySelector('.suggestions');
 // 5. make all these process to one fucntion
