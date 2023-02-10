@@ -39,15 +39,23 @@ h1 {
     transition: all .5s;
 }
 
-.align-left .slide-in {
+.align-left.slide-in {
     transform: translateX(-30%) scale(0.95);
 }
 
-.align-right .slide-in {
+.align-right.slide-in {
     transform: translateX(30%) scale(0.95);
 }
 
-.slide-in-active {
+.slide-in.active {
     opacity: 1;
-    transform: translate(0%) scale(1);
+    transform: translateX(0%) scale(1);
+}
+
+.line {
+    height: 10px;
+    width: 100%;
+    position: absolute;
+    /* top: 500px; */
+    background-color: red;
 }
