@@ -15,4 +15,16 @@ function checkSlide() {
   console.log("checkActivation");
 }
 
-window.addEventListener("scroll", checkSlide);
+function debounce(func, wait = 20) {
+  let timeout;
+  return (...args) => {
+    const context = this;
+    const later = () => {
+      func.apply(context, ...args);
+    };
+    if (timeout) {clearTimeout(timeout);}
+    timeout = setTimeout(later, wait);
+  }
+}
+
+    window.addEventListener("scroll", debounce(checkSlide));
